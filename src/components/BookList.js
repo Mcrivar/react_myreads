@@ -16,7 +16,7 @@ const BookList = (props) => {
         <div className="list-books">
             <div className="list-books-header">
                 <div className="list-books-title">
-                    <h1>Bookshelf App</h1>
+                    <h1>Udacity MyReads App</h1>
                 </div>
                 <div className="open-search hvr-pop">
                     <Link to="/search">Add a book</Link>
