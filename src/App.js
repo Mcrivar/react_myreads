@@ -34,11 +34,21 @@ class BooksApp extends React.Component {
 
     searchBooks = (event) => {
         let query = event.target.value;
+        // if (query) {
+        //     BooksAPI.search(query, 20).then(bookSearch => {
+        //         this.setState({ bookSearch });
+        //     });
+        // }
         if (query) {
-            BooksAPI.search(query, 20).then(bookSearch => {
-                this.setState({ bookSearch });
-            });
-        }
+            BooksAPI.search(query)
+                .then(bookSearch => {
+               //     console.log(bookSearch)
+                    if (!bookSearch || "error" in bookSearch) this.setState({ query: '', bookSearch: [] })
+                    else {
+                        this.setState({query: query, bookSearch: bookSearch})
+                    }
+                })
+        } else this.setState({ query: '', bookSearch: [] })
     };
 
     updateQuery = (query) => {

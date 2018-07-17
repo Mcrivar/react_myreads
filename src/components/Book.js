@@ -23,7 +23,7 @@ const Book = (props) =>{
                         defaultValue={props.getBookshelf(props.book.id)}
                         onChange={e => props.changeBookshelf(e.target.value, props.book)}
                     >
-                        <option value="none" disabled>
+                        <option>
                             Move to...
                         </option>
                         <option value="currentlyReading">Currently Reading</option>
