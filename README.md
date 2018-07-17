@@ -16,7 +16,7 @@ A Book Tracking React Application for the Udacity Front End Nanodegree program.
 * install all project dependencies with npm install
 * start the development server with npm start
 
-###Structure
+### Structure
 
 ```
 ├── CONTRIBUTING.md
